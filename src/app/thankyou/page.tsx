@@ -13,16 +13,16 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Thank You | Daryl Yeap",
-  description: "Thank you for subscribing to Daryl’s Deep Dive.",
-  other: {
-    offer: 'Email Signup',
-  },
+  description: "Thank you for subscribing to Daryl's Deep Dive.",
 }
 
 export default function ThankYou() {
   return (
     <>
-      <script src="https://d15dfsr886zcp9.cloudfront.net/thankYou_script.js" defer></script>
+      <head>
+        <meta name="offer" content="Newsletter" />
+        <script src="https://d15dfsr886zcp9.cloudfront.net/emailSignupThankYouScript.js" defer></script>
+      </head>
       <ScrollAnimationWrapper>
         <div className="flex flex-col min-h-screen bg-slate-50">
           
