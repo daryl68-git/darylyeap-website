@@ -1,15 +1,16 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Loader2, Mail, CheckCircle2 } from "lucide-react"
+import { Loader2, Mail } from "lucide-react"
 
 export function NewsletterForm() {
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState('')
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -31,30 +32,12 @@ export function NewsletterForm() {
         throw new Error(data.error || 'Something went wrong. Please try again.')
       }
       
-      setIsSuccess(true)
-      setEmail('')
+      router.push('/thankyou')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
     } finally {
       setIsLoading(false)
     }
-  }
-
-  if (isSuccess) {
-    return (
-      <div className="flex flex-col items-center justify-center p-6 bg-emerald-50 border border-emerald-200 rounded-xl text-center animate-in fade-in zoom-in duration-300">
-        <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
-          <CheckCircle2 className="w-6 h-6 text-emerald-600" />
-        </div>
-        <h3 className="text-xl font-semibold text-emerald-900 mb-2">Thank you for subscribing!</h3>
-        <p className="text-emerald-700">
-          <span className="whitespace-nowrap">Please check your inbox to verify your email and grab your free gift.</span>
-        </p>
-        <p className="text-emerald-700">
-        <span className="whitespace-nowrap">(Can't find it? Check your 'Promotions' or 'Spam' folder)</span>
-        </p>
-      </div>
-    )
   }
 
   return (
