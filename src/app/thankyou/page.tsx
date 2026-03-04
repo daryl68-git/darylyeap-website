@@ -53,7 +53,7 @@ export default function ThankYouPage() {
                 Discover <span className="text-amber-200 font-semibold">evidence-based strategies</span> for strengthening your tendons, improving mobility and identifying costly mistakes that prevent lasting recovery in my free weekly newsletter!
               </p>
 
-              <div className="scroll-animation w-full max-w-lg mt-8">
+              <div className="scroll-animation w-full max-w-xl mt-8">
                 <div className="flex flex-col items-center justify-center p-6 bg-emerald-50 border border-emerald-200 rounded-xl text-center">
                   <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
                     <CheckCircle2 className="w-6 h-6 text-emerald-600" />
