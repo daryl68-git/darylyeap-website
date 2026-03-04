@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from 'next/font/google'
-import Script from "next/script";
 import { CheckCircle2 } from "lucide-react";
 import { ScrollAnimationWrapper } from "@/components/client/scroll-animation-wrapper"
 import { ProfileImage } from "@/components/client/profile-image"
@@ -15,18 +14,13 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Thank You | Daryl Yeap",
   description: "Thank you for subscribing to Daryl\u2019s Deep Dive newsletter.",
-  other: {
-    offer: "Newsletter",
-  },
 };
 
 export default function ThankYouPage() {
   return (
     <>
-      <Script
-        src="https://d15dfsr886zcp9.cloudfront.net/emailSignupThankYouScript.js"
-        strategy="afterInteractive"
-      />
+      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+      <script src="https://d15dfsr886zcp9.cloudfront.net/emailSignupThankYouScript.js" defer></script>
       <ScrollAnimationWrapper>
         <div className="flex flex-col min-h-screen bg-slate-50">
 
