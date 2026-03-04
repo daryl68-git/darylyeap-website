@@ -31,7 +31,7 @@ export function NewsletterForm() {
       if (!response.ok) {
         throw new Error(data.error || 'Something went wrong. Please try again.')
       }
-      
+
       router.push('/thankyou')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
@@ -41,7 +41,7 @@ export function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-4" suppressHydrationWarning>
+    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-4">
       <div className="flex flex-col sm:flex-row gap-3">
         <div className="relative flex-grow">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -55,7 +55,6 @@ export function NewsletterForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
             disabled={isLoading}
-            suppressHydrationWarning
           />
         </div>
         <Button 
