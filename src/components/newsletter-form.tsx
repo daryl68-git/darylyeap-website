@@ -41,7 +41,7 @@ export function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-4">
+    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-4" suppressHydrationWarning>
       <div className="flex flex-col sm:flex-row gap-3">
         <div className="relative flex-grow">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -55,6 +55,7 @@ export function NewsletterForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
             disabled={isLoading}
+            suppressHydrationWarning
           />
         </div>
         <Button 
