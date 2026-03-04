@@ -50,6 +50,9 @@ export function NewsletterForm() {
         <p className="text-emerald-700">
           <span className="whitespace-nowrap">Please check your inbox to verify your email and grab your free gift.</span>
         </p>
+        <p className="text-emerald-700">
+        <span className="whitespace-nowrap">(Can't find it? Check your 'Promotions' or 'Spam' folder)</span>
+        </p>
       </div>
     )
   }
