@@ -1,6 +1,4 @@
 import { Playfair_Display } from 'next/font/google'
-import type { Metadata } from 'next'
-import Script from 'next/script'
 import { ScrollAnimationWrapper } from "@/components/client/scroll-animation-wrapper"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { ProfileImage } from "@/components/client/profile-image"
@@ -12,18 +10,10 @@ const playfair = Playfair_Display({
   style: ['normal', 'italic'],
 })
 
-export const metadata: Metadata = {
-  other: {
-    username: 'user_34MCIcVy0EgobygweV7nmz4S8bj',
-    offer: 'Email Signup',
-  },
-}
-
 export default function Home() {
   return (
-    <>
-      <Script src="https://d15dfsr886zcp9.cloudfront.net/tracker_script.js" strategy="afterInteractive" />
-      <ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+    <script src="https://d15dfsr886zcp9.cloudfront.net/tracker_script.js" defer></script>
       <div className="flex flex-col min-h-screen bg-slate-50">
         
         {/* Hero Section */}
@@ -61,6 +51,5 @@ export default function Home() {
 
       </div>
     </ScrollAnimationWrapper>
-    </>
   )
 }

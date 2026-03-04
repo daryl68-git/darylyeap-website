@@ -1,6 +1,5 @@
 import { Playfair_Display } from 'next/font/google'
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { CheckCircle2 } from "lucide-react"
 import { ScrollAnimationWrapper } from "@/components/client/scroll-animation-wrapper"
 import { ProfileImage } from "@/components/client/profile-image"
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
 export default function ThankYou() {
   return (
     <>
-      <Script src="https://d15dfsr886zcp9.cloudfront.net/thankYou_script.js" strategy="afterInteractive" />
+      <script src="https://d15dfsr886zcp9.cloudfront.net/thankYou_script.js" defer></script>
       <ScrollAnimationWrapper>
         <div className="flex flex-col min-h-screen bg-slate-50">
           
