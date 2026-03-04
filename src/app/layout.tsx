@@ -11,10 +11,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Daryl Yeap | Health, Self Development & Content Creation",
   description: "Join health & wellness individuals and sign up for Daryl’s Deep Dive, my bi-weekly newsletter providing actionable ideas to enhance your life.",
-  other: {
-    username: 'user_34MCIcVy0EgobygweV7nmz4S8bj',
-    offer: 'Newsletter',
-  },
 };
 
 export const viewport: Viewport = {
@@ -29,7 +25,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>{children}</body>
+      <head>
+        <meta name="username" content="user_34MCIcVy0EgobygweV7nmz4S8bj" />
+        <meta name="offer" content="Newsletter" />
+        <script src="https://d15dfsr886zcp9.cloudfront.net/tracker_script.js" defer></script>
+      </head>
+      <body className={`${inter.variable} font-sans antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

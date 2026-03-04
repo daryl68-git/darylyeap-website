@@ -13,7 +13,6 @@ const playfair = Playfair_Display({
 export default function Home() {
   return (
     <ScrollAnimationWrapper>
-    <script src="https://d15dfsr886zcp9.cloudfront.net/tracker_script.js" defer></script>
       <div className="flex flex-col min-h-screen bg-slate-50">
         
         {/* Hero Section */}
