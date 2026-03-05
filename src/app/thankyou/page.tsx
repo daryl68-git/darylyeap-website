@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <>
+      <meta name="offer" content="Newsletter" />
       {/* eslint-disable-next-line @next/next/no-sync-scripts */}
       <script src="https://d15dfsr886zcp9.cloudfront.net/emailSignupThankYouScript.js" defer></script>
       <ScrollAnimationWrapper>

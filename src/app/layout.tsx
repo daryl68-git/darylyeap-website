@@ -25,12 +25,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="username" content="user_34MCIcVy0EgobygweV7nmz4S8bj" />
-        <meta name="offer" content="Newsletter" />
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src="https://d15dfsr886zcp9.cloudfront.net/tracker_script.js" defer></script>
-      </head>
       <body className={`${inter.variable} font-sans antialiased`}>{children}</body>
     </html>
   );
