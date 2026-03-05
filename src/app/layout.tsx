@@ -9,8 +9,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Daryl Yeap | Health, Self Development & Content Creation",
-  description: "Join health & wellness individuals and sign up for Daryl\u2019s Deep Dive, my bi-weekly newsletter providing actionable ideas to enhance your life.",
+  title: "Daryl Yeap | Pain Relief, Mobility & Strength",
+  description: "Join busy professionals and sign up for The Mobility Memo, my weekly newsletter providing evidence-based methods and insights to build bulletproof joints.",
 };
 
 export const viewport: Viewport = {

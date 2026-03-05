@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Thank You | Daryl Yeap",
-  description: "Thank you for subscribing to Daryl\u2019s Deep Dive newsletter.",
+  description: "Thank you for subscribing to The Mobility Memo newsletter.",
 };
 
 export default function ThankYouPage() {
